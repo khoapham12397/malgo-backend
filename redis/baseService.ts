@@ -1,7 +1,10 @@
 
 import { createClient } from "redis";
 import { ShareParam } from "../controllers/userController2";
-const redisClient = createClient();
+import dotenv from 'dotenv'
+const redisClient = createClient({
+    url : process.env.REDIS_URL
+});
 
 export const initRedisClient = async () =>{
     redisClient.on('error', error=>{
@@ -10,9 +13,9 @@ export const initRedisClient = async () =>{
     await redisClient.connect();        
 }
 
+
 export const insertShareP2PNotif = async (params: ShareParam) => {
     const key = `notification:share:${params.recieverId}`;
-    // adding dang gi do dung:// co the la vay cho le dunf://d g
     // senderID:resourceId: dung va d: co ban la vay thoi dung:
 
 }

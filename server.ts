@@ -138,9 +138,9 @@ app.use(notFoundMiddleware);
 
 
 
-const PORT = 5000 || process.env.PORT;
+const PORT =process.env.PORT || 5000;
 
-const server =  app.listen(8080, () => {
+const server =  app.listen(PORT, () => {
   console.log(`Server is listening on port 8080`);
 });
 initRedisClient();
