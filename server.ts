@@ -58,9 +58,9 @@ const app: Express = express();
 
 // Middleware
 app.use(credentialsMiddleware);
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 app.use(express.json());
-
+app.use(cors());
 
 //app.use('/pdf', express.static(appRoot.path + '/static'));
 app.post('/images', function (req: express.Request, res) {
