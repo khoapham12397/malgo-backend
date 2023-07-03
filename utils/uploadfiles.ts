@@ -35,5 +35,5 @@ export const multi_upload_img = multer({
 // van de dang la gi dung:
 
 export const getUrlImage = (filename: string) => {
-  return 'http://localhost:8080/images/' + filename;
+  return 'images/' + filename;
 };

@@ -1,7 +1,8 @@
 
 import { createClient } from "redis";
 import { ShareParam } from "../controllers/userController2";
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+dotenv.config();
 const redisClient = createClient({
     url : process.env.REDIS_URL
 });

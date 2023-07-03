@@ -18,6 +18,7 @@ import userRouter from './routes/userRoute';
 import {initIOSocket} from './socket-server';
 import {initRedisClient} from './redis/baseService';
 import { isAuthenticated, isAuthenticatedOption } from './middleware/authMiddleware';
+import appRootPath from 'app-root-path';
 
 
 const storage = multer.diskStorage({
@@ -119,9 +120,11 @@ app.use('/api/auth', authRouter);
 // Private routes
 app.use('/api/user', verifyToken, userPrivateRouter);
 app.use('/api/admin', verifyToken, adminRouter);
-
+/*
 const appRoot = require('app-root-path');
-app.use('/images', express.static(appRoot.path + '/images'));
+console.log(appRootPath);
+*/
+app.use('/images', express.static(path.resolve(__dirname ,'images')));
 app.use('/api/codingproblem', codingProblemRouter);
 
 

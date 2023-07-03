@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mathgo-api
-        image: 228115104280.dkr.ecr.ap-southeast-1.amazonaws.com/mathgo:38703eee75fbe76f359e5cd875f00092f12cff23
+        image: 228115104280.dkr.ecr.ap-southeast-1.amazonaws.com/mathgo:0ebfdb3ed5702dc62181147677fc63c2770a5fff
         ports:
         - containerPort: 8080
