@@ -13,4 +13,4 @@ COPY ./prisma ./prisma
 COPY ./images ./images
 RUN npm install
 RUN npx prisma generate
-CMD ["npm start"]
+CMD ["npm","start"]
