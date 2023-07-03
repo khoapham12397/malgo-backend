@@ -11,6 +11,7 @@ COPY package.json .
 COPY package-lock.json .
 COPY ./prisma ./prisma
 COPY ./images ./images
+COPY .env .env
 RUN npm install
 RUN npx prisma generate
 CMD ["npm","start"]
