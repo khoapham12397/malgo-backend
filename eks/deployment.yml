@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-bank-api-deployment
+  name: mathgo-api-deployment
   labels:
     app: mathgo-api
 spec:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mathgo-api
-        image: 228115104280.dkr.ecr.ap-southeast-1.amazonaws.com/mathgo:6b04b0574ef98c8715c7a5204a6e8890f88e3711
+        image: 228115104280.dkr.ecr.ap-southeast-1.amazonaws.com/mathgo:f01e7511e056236239ca1a884461f5498ea189f7
         ports:
         - containerPort: 8080
